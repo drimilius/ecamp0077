@@ -24,7 +24,7 @@
 <form action="confirmacion.html" method="get">
     <h3>Datos Personales</h3>
     <fieldset>
-        <label for="">Nombre completo</label>
+        <label for="">Nombre completo</label>&nbsp;  &nbsp; &nbsp;  &nbsp;
         <input type="text"placeholder="Nombre(s) Paterno Materno">
         <label for=""> fecha de nacimiento</label>
         <input type="date" name="" id="">
@@ -33,7 +33,7 @@
     <fieldset>
         <label for="">Calle</label>
         <input type="text">
-        <label for="">Numero</label>
+        <label for="">Numero</label> &nbsp;  &nbsp;
         <input type="number" name="" id="">
         <label for="region">Región de Chile:</label>
                 <select id="region" name="region" required>
@@ -57,6 +57,9 @@
                 </select>
          
     </fieldset>
+    <label for="correo">correo</label>
+    <input type="email" name="correo" pattern="^[^@]+@[^@]+\.[azA-Z]{2,}$" required>
+
 </form>
 </section>
 
