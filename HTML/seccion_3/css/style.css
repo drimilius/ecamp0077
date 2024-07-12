@@ -1,12 +1,6 @@
 /* estilo con link*/
-header{
-    background:darkgreen;
-}
 
-section{
-    background:darkcyan;
-}
-
+/*Fuentes*/
 h1{
     color:whitesmoke;
     font-size: 70px;
@@ -14,6 +8,32 @@ h1{
 h2{
     color:oldlace;
 }
+nav{
+    background:rgba(77, 255, 106, 0.17);
+}
+h3{
+   color:hsla(157, 55%, 45%, 0.43);
+}
+h5{
+    color: rgba(255, 6, 6, 0.892)
+}
+p{
+    color: crimson;
+}
+header{
+    background:darkgreen;
+}
+
+/*seccion semanticas*/
+section{
+    background:darkcyan;
+}
+
+footer {
+    background:rgb(205, 205, 50);
+}
+
+
 img{
     width: 150px;
 }
