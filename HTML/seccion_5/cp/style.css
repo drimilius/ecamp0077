@@ -1,0 +1,33 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFF5E1;
+    color: #333333;
+  }
+  
+  h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8B4513;
+  }
+  
+  .navbar-brand, .nav-link {
+    color: #8B4513 !important;
+  }
+  
+  .btn-primary {
+    background-color: #D2691E;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #8B4513;
+  }
+  
+  .card-title {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  footer {
+    background-color: #8B4513;
+    color: #FFF5E1;
+  }
+  

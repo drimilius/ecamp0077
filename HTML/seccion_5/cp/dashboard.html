@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Chocolates Sofisticados</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="d-flex" id="wrapper">
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Chocolates Sofisticados</div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Gestión de Productos</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Gestión de Pedidos</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Gestión de Usuarios</a>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Dashboard</h1>
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-white bg-primary mb-3">
+              <div class="card-header">Total Ventas</div>
+              <div class="card-body">
+                <h5 class="card-title">$20,000</h5>
+                <p class="card-text">Resumen de ventas totales.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-white bg-success mb-3">
+              <div class="card-header">Productos Vendidos</div>
+              <div class="card-body">
+                <h5 class="card-title">500</h5>
+                <p class="card-text">Número de productos vendidos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-white bg-warning mb-3">
+              <div class="card-header">Nuevos Usuarios</div>
+              <div class="card-body">
+                <h5 class="card-title">120</h5>
+                <p class="card-text">Cantidad de nuevos usuarios registrados.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-white bg-danger mb-3">
+              <div class="card-header">Pedidos Pendientes</div>
+              <div class="card-body">
+                <h5 class="card-title">15</h5>
+                <p class="card-text">Pedidos que necesitan atención.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, jQuery, and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+</body>
+</html>
