@@ -8,13 +8,24 @@
 // console.log("el subtotal es = " + calcular_subtotal(precio_articulo,cantidad_articulo));
 // }
 // ciclo do while
-var numero=  parseInt(prompt("Ingresa un numero"));
+// /var numero=  parseInt(prompt("Ingresa un numero"));
+var numero;
 var x=1;
 do{
     console.log(x);
     x = x +1;
 }while( x < numero);
  
+//try catch
+var numero2=  parseInt(prompt("Ingresa un numero 2"));
+try {
+    if(numero2 != 10 ) throw new Error("El numero no es 10");
+    console.log("la ejecucion se hizo de manera Correcta") ;   
+} catch (error) {
+console.log(error.name, error.message);
+}
+
+
 
 
 function calcular_subtotal(precio,cantidad){
