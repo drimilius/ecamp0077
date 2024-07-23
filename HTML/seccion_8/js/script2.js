@@ -4,7 +4,7 @@ const calificaciones = [6, 3, 8]; // Las calificaciones corresponden a los alumn
 
 // Función para mostrar el menú
 function mostrarMenu() {
-    const opcion = prompt("Seleccione una opción:\n1. Ver lista de alumnos\n2. Ver calificaciones de alumnos\n3. Calcular el promedio del grupo");
+   var opcion = prompt("Seleccione una opción:\n1. Ver lista de alumnos\n2. Ver calificaciones de alumnos\n3. Calcular el promedio del grupo");
     
     switch(opcion) {
         case '1':
