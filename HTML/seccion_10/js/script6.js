@@ -1,39 +1,50 @@
-$(document).ready(function(){
-    $('#myForm').on('submit', function(event){
-        event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+$(document).ready(function() {
+    $('#simpleForm').on('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario
 
-        // Validación de campos
         let isValid = true;
-        $('input, textarea').each(function(){
-            if($(this).val() === '') {
+        let errorMessage = '';
+        let successMessage = '';
+
+        // Limpiar mensajes previos
+        $('.error').remove();
+        $('#formMessage').empty();
+
+        // Validación del nombre de usuario
+        const username = $('#username').val().trim();
+        if (username === '') {
+            isValid = false;
+            $('#username').after('<span class="error">El nombre de usuario es obligatorio.</span>');
+        }
+
+        // Validación del correo electrónico
+        const email = $('#email').val().trim();
+        if (email === '') {
+            isValid = false;
+            $('#email').after('<span class="error">El correo electrónico es obligatorio.</span>');
+        } else {
+            const emailPattern = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
                 isValid = false;
-                $(this).next('.error').remove();
-                $(this).after('<span class="error">Este campo es requerido</span>');
-            } else {
-                $(this).next('.error').remove();
+                $('#email').after('<span class="error">Ingrese un correo electrónico válido.</span>');
             }
-        });
+        }
 
-        if(isValid) {
-            // Envío de datos mediante AJAX
-            let formData = {
-                name: $('#name').val(),
-                email: $('#email').val(),
-                message: $('#message').val()
-            };
+        // Validación de la contraseña
+        const password = $('#password').val().trim();
+        if (password === '') {
+            isValid = false;
+            $('#password').after('<span class="error">La contraseña es obligatoria.</span>');
+        }
 
-            $.ajax({
-                type: 'POST',
-                url: 'https://ejemplo.com/api/enviar', // Reemplaza con la URL real de tu servidor
-                data: formData,
-                success: function(response){
-                    $('#response').html('<p>Mensaje enviado exitosamente</p>');
-                    $('#myForm')[0].reset(); // Limpia el formulario
-                },
-                error: function(){
-                    $('#response').html('<p>Ocurrió un error al enviar el mensaje</p>');
-                }
-            });
+        // Mostrar mensaje de éxito o error
+        if (isValid) {
+            successMessage = '<p class="success">Formulario enviado exitosamente.</p>';
+            $('#formMessage').html(successMessage);
+            // Aquí puedes agregar la lógica para enviar el formulario al servidor si es necesario.
+        } else {
+            errorMessage = '<p class="error">Por favor, corrige los errores en el formulario.</p>';
+            $('#formMessage').html(errorMessage);
         }
     });
 });

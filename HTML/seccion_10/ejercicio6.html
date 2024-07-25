@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con jQuery</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form id="simpleForm">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="formMessage"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script6.js"></script>
+</body>
+</html>

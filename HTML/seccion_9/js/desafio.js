@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Función para agregar una nueva tarea
     function addTask() {
-        const taskText = taskInput.value.trim();
+        const taskText = taskInput.value;
         if (taskText !== "") {
             const li = document.createElement('li');
             li.textContent = taskText;
