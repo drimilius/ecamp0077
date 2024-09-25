@@ -4,7 +4,7 @@ const calificaciones = [6, 3, 8]; // Las calificaciones corresponden a los alumn
 
 // Función para mostrar el menú
 function mostrarMenu() {
-   var opcion = prompt("Seleccione una opción:\n1. Ver lista de alumnos\n2. Ver calificaciones de alumnos\n3. Calcular el promedio del grupo");
+    const opcion = prompt("Seleccione una opción:\n1. Ver lista de alumnos\n2. Ver calificaciones de alumnos\n3. Calcular el promedio del grupo");
     
     switch(opcion) {
         case '1':
@@ -39,6 +39,7 @@ function verCalificaciones() {
     }
 }
 
+
 // Función para calcular el promedio del grupo
 function calcularPromedio() {
     let suma = 0;
@@ -46,7 +47,7 @@ function calcularPromedio() {
         suma += calificaciones[i];
     }
     let promedio = suma / calificaciones.length;
-    console.log("El promedio del grupo es:" + promedio );
+    console.log(`El promedio del grupo es: ${promedio.toFixed(1)}`);
 }
 
 // Llamar a la función para mostrar el menú

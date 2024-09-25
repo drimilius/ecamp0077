@@ -1,22 +1,21 @@
 let mochila = {
-    //propiedades del objeto
+    //Propiedades del objeto
     color: "negro",
-    tamaño: " 20cm",
-    numeroBolsillos: 2,
+    tamano: "20cm",
+    numero_bolsillos: 2,
     numeroCierres: 2,
     //metodos del objeto
-    abrir_tapa() {
-        console.log("la tapa de la mochila esta abierta");
+    abrir_tapa: function() {
+        console.log("La tapa de la mochila esta abierta");
     },
-    cerrarTapa() {
+    cerrarTapa: function(){
         console.log("la tapa de la mochila esta cerrada");
     }
 };
-//accediendo a las propiedades del objeto
+//accediendo a las  propiedes del objeto
 console.log(mochila.color);
-console.log(mochila.tamaño);
-//accediendo a los metodos del objeto
+console.log(mochila.tamano);
+//acciendo a los metodos del objeto
 mochila.abrir_tapa();
 mochila.cerrarTapa();
 console.log(mochila);
-
